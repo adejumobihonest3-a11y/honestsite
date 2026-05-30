@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CHAGO Foundation | Character & Leadership Development</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            900: '#0B1B3D', // Deep Navy
+                            800: '#142E5E', // Primary Blue
+                            600: '#2563EB', // Bright Blue
+                            accent: '#F59E0B', // Gold/Amber
+                            light: '#F8FAFC', // Off White
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #0B1B3D;
+            background-image: linear-gradient(rgba(11, 27, 61, 0.85), rgba(11, 27, 61, 0.95)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .founder-img {
+            object-position: center top;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-light antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center text-brand-accent font-bold text-xl shadow-lg">
+                        C
+                    </div>
+                    <div>
+                        <span class="font-bold text-xl tracking-tight text-brand-900 block leading-none">CHAGO</span>
+                        <span class="text-xs text-brand-600 font-semibold uppercase tracking-widest block mt-1">Foundation</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">About</a>
+                    <a href="#founder" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">The Founder</a>
+                    <a href="#programs" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Programs</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brand-600 font-medium transition-colors">Contact</a>
+                    <a href="#contact" class="bg-brand-accent hover:bg-yellow-500 text-brand-900 font-bold py-2.5 px-6 rounded-full shadow-md transition-all transform hover:-translate-y-0.5">Register Now</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1 sm:px-3 flex flex-col shadow-inner">
+                <a href="#about" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-600 rounded-md">About</a>
+                <a href="#founder" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-600 rounded-md">The Founder</a>
+                <a href="#programs" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-600 rounded-md">Programs</a>
+                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-brand-600 rounded-md">Contact</a>
+                <a href="#contact" class="block mt-4 text-center bg-brand-800 text-white font-bold py-3 px-4 rounded-lg">Register Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-32 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="w-full md:w-3/5 text-white pr-0 md:pr-12">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-800 border border-brand-600 text-brand-accent text-sm font-semibold tracking-wide uppercase mb-6">
+                    Professional Training & Leadership
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Developing Character.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-yellow-200">Building Leaders.</span><br>
+                    Transforming Society.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto md:mx-0 font-light leading-relaxed">
+                    We equip individuals with the skills, mindset, discipline, and character needed to become responsible leaders and influential contributors in society.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#programs" class="bg-brand-accent hover:bg-yellow-500 text-brand-900 font-bold py-4 px-8 rounded-lg shadow-lg transition-all text-lg text-center">
+                        Explore Programs
+                    </a>
+                    <a href="#about" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-900 font-bold py-4 px-8 rounded-lg transition-all text-lg text-center">
+                        Discover Our Mission
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Hero Info Card -->
+            <div class="hidden md:block w-full md:w-2/5 mt-12 md:mt-0">
+                <div class="bg-white rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-accent rounded-bl-full opacity-20 -mr-4 -mt-4"></div>
+                    <div class="text-brand-800 mb-4">
+                        <i class="fa-solid fa-quote-left text-4xl opacity-50"></i>
+                    </div>
+                    <p class="text-xl font-serif text-gray-800 italic mb-6 relative z-10 leading-relaxed">
+                        "The strength of a nation, an organization, or a family is not found in its resources, but in the character of its people."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden border-2 border-brand-accent">
+                            <img src="https://storage.googleapis.com/gemini-user-content-storage-3e1ee442490890ed020e980f7bb63212/04882dd1a3d905dc11200632b4ab5f2d7a22bfda867c4e4eb1abda46b9aebbb3/Chaplain_DR._Adejumobi_Honest_Bamidele.png" alt="Dr Adejumobi" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Chaplain Dr Adejumobi Honest B.</h4>
+                            <p class="text-sm text-gray-500">Founder, CHAGO Foundation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About & Vision Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-600 uppercase mb-2">About Us</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">The CHAGO Foundation</h3>
+                <p class="text-lg text-gray-600">
+                    A professional training and leadership development institution dedicated to character transformation, ethical leadership, and personal effectiveness.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2070" alt="Training Session" class="rounded-2xl shadow-xl w-full h-[400px] object-cover">
+                    <div class="absolute -bottom-6 -right-6 bg-brand-800 text-white p-6 rounded-xl shadow-lg max-w-xs hidden sm:block border-b-4 border-brand-accent">
+                        <h4 class="font-bold text-lg mb-1">Certification</h4>
+                        <p class="text-sm text-brand-100">Graduates receive a globally recognized Certificate in Character Development and Leadership.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Mission -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-blue-50 text-brand-600 rounded-lg flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Our Mission</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                To raise responsible leaders through character development and leadership training. We design programs that target the core of human behavior to forge lasting excellence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-amber-50 text-brand-accent rounded-lg flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Our Vision</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                To become a leading institution for character and leadership development in Africa and beyond, serving as a catalyst for societal transformation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Why Choose Us -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-xl shadow-sm">
+                                <i class="fa-solid fa-check-double"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Why Choose Us</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm text-gray-600 font-medium mt-3">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Professional Training</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Practical Approach</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Expert Facilitators</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-accent"></i> Character-Based</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Founder Section -->
+    <section id="founder" class="py-20 bg-brand-light relative overflow-hidden">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-100 rounded-full opacity-50 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-100 rounded-full opacity-50 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Image -->
+                    <div class="w-full lg:w-2/5 h-96 lg:h-auto relative">
+                        <img src="https://storage.googleapis.com/gemini-user-content-storage-3e1ee442490890ed020e980f7bb63212/04882dd1a3d905dc11200632b4ab5f2d7a22bfda867c4e4eb1abda46b9aebbb3/Chaplain_DR._Adejumobi_Honest_Bamidele.png" alt="Chaplain Dr Adejumobi Honest Bamidele" class="w-full h-full object-cover founder-img">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 to-transparent lg:hidden"></div>
+                        <div class="absolute bottom-4 left-4 lg:hidden text-white">
+                            <h3 class="text-2xl font-bold">Chaplain Dr Adejumobi H. B.</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Content -->
+                    <div class="w-full lg:w-3/5 p-8 lg:p-12 xl:p-16 flex flex-col justify-center">
+                        <span class="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2">The Founder</span>
+                        <h3 class="hidden lg:block text-3xl font-extrabold text-gray-900 mb-2">Chaplain Dr Adejumobi Honest Bamidele</h3>
+                        <p class="text-brand-800 font-medium mb-6">Doctorate in Spirithoutherapy & Psychotheology</p>
+
+                        <div class="space-y-4 text-gray-600 mb-8 leading-relaxed">
+                            <p>
+                                Dr. Adejumobi is an advocate of Character Reformation with a profound passion for helping individuals, families, and organizations become better through his unique blend of chaplaincy, leadership development, and advocacy.
+                            </p>
+                            <p>
+                                He serves as a catalyst for those seeking to align their values with moral excellence and integrity. As a distinguished leader, social reformer, and spiritual architect, he is deeply dedicated to the holistic transformation of society.
+                            </p>
+                        </div>
+
+                        <blockquote class="bg-gray-50 border-l-4 border-brand-accent p-6 rounded-r-lg italic text-lg font-serif text-gray-800 relative">
+                            <i class="fa-solid fa-quote-left absolute top-4 right-6 text-gray-200 text-4xl"></i>
+                            "Character is the bedrock of any lasting success... When we reform the person, we transform the world."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Training Areas -->
+    <section class="py-20 bg-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-accent uppercase mb-2">Areas of Expertise</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">Core Training Areas</h3>
+                <p class="text-lg text-gray-300">
+                    Our curriculum covers critical domains essential for creating holistic, effective, and ethical leaders.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Character Dev.</h4>
+                    <p class="text-sm text-gray-400">Building integrity and solidifying personal values for long-term effectiveness.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Leadership Dev.</h4>
+                    <p class="text-sm text-gray-400">Enhancing capacity, influence, and the ability to guide teams successfully.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Emotional Intel.</h4>
+                    <p class="text-sm text-gray-400">Mastering self-awareness, empathy, and interpersonal relationships.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-balance-scale"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Ethical Leadership</h4>
+                    <p class="text-sm text-gray-400">Making morally sound decisions and upholding high ethical standards in all sectors.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Communication</h4>
+                    <p class="text-sm text-gray-400">Expressing ideas clearly, listening actively, and commanding presence.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Conflict Resolution</h4>
+                    <p class="text-sm text-gray-400">Navigating disputes constructively and maintaining harmonious environments.</p>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Vision & Purpose</h4>
+                    <p class="text-sm text-gray-400">Discovering and aligning personal and organizational goals for maximum impact.</p>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="bg-brand-800 border border-brand-600/30 rounded-xl p-6 hover:-translate-y-2 transition-transform duration-300 group">
+                    <div class="w-14 h-14 bg-brand-900 rounded-lg flex items-center justify-center text-2xl text-brand-accent mb-4 group-hover:bg-brand-accent group-hover:text-brand-900 transition-colors">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Character Reform.</h4>
+                    <p class="text-sm text-gray-400">Transforming toxic habits and behaviors into constructive, disciplined actions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Left Column: Programs List -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-sm font-bold tracking-widest text-brand-600 uppercase mb-2">Curriculum</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Our Training Programs</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Program Item -->
+                        <div class="flex gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow bg-gray-50">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="w-8 h-8 bg-brand-800 text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Character Development Training</h4>
+                                <p class="text-gray-600">Develop integrity, discipline, and personal effectiveness.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Program Item -->
+                        <div class="flex gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow bg-gray-50">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="w-8 h-8 bg-brand-800 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Leadership Development Training</h4>
+                                <p class="text-gray-600">Build leadership capacity and widespread influence.</p>
+                            </div>
+                        </div>
+
+                        <!-- Program Item -->
+                        <div class="flex gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow bg-gray-50">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="w-8 h-8 bg-brand-800 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Character Reformation Program</h4>
+                                <p class="text-gray-600">Transform personal habits, behavior, and mindset fundamentally.</p>
+                            </div>
+                        </div>
+
+                        <!-- Program Item -->
+                        <div class="flex gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow bg-gray-50">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="w-8 h-8 bg-brand-800 text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Executive Leadership Program</h4>
+                                <p class="text-gray-600">Tailored specifically for business leaders, C-suite, and professionals.</p>
+                            </div>
+                        </div>
+
+                        <!-- Program Item -->
+                        <div class="flex gap-4 p-5 rounded-xl border border-gray-100 hover:shadow-md transition-shadow bg-gray-50">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="w-8 h-8 bg-brand-800 text-white rounded-full flex items-center justify-center font-bold text-sm">5</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Youth Leadership Program</h4>
+                                <p class="text-gray-600">Empowering students, undergraduates, and young professionals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Durations & Audience -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-8">
+                    
+                    <!-- Duration Card -->
+                    <div class="bg-brand-900 rounded-2xl p-8 text-white shadow-xl">
+                        <h4 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-brand-accent"></i>
+                            Program Duration Options
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-brand-800 p-4 rounded-lg border-l-4 border-brand-accent">
+                                <h5 class="font-bold text-lg">1-Day</h5>
+                                <p class="text-xs text-brand-100 font-medium mb-1">Leadership Seminar</p>
+                                <p class="text-sm text-gray-300">Introduction to character & leadership principles.</p>
+                            </div>
+                            <div class="bg-brand-800 p-4 rounded-lg border-l-4 border-brand-accent">
+                                <h5 class="font-bold text-lg">3-Day</h5>
+                                <p class="text-xs text-brand-100 font-medium mb-1">Leadership Training</p>
+                                <p class="text-sm text-gray-300">Comprehensive leadership development workshop.</p>
+                            </div>
+                            <div class="bg-brand-800 p-4 rounded-lg border-l-4 border-brand-accent">
+                                <h5 class="font-bold text-lg">1-Week</h5>
+                                <p class="text-xs text-brand-100 font-medium mb-1">Intensive Program</p>
+                                <p class="text-sm text-gray-300">Deep, immersive transformational training.</p>
+                            </div>
+                            <div class="bg-brand-800 p-4 rounded-lg border-l-4 border-brand-accent">
+                                <h5 class="font-bold text-lg">3-Month</h5>
+                                <p class="text-xs text-brand-100 font-medium mb-1">Certificate Program</p>
+                                <p class="text-sm text-gray-300">Advanced, rigorous leadership & character course.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Who Should Attend -->
+                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Who Should Attend?</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-blue-50 text-brand-800 text-sm font-medium rounded-full border border-blue-100">Undergraduate Students</span>
+                            <span class="px-3 py-1.5 bg-blue-50 text-brand-800 text-sm font-medium rounded-full border border-blue-100">Graduate Students</span>
+                            <span class="px-3 py-1.5 bg-amber-50 text-amber-800 text-sm font-medium rounded-full border border-amber-100">Business Executives</span>
+                            <span class="px-3 py-1.5 bg-amber-50 text-amber-800 text-sm font-medium rounded-full border border-amber-100">Corporate Professionals</span>
+                            <span class="px-3 py-1.5 bg-gray-50 text-gray-800 text-sm font-medium rounded-full border border-gray-200">Government Officials</span>
+                            <span class="px-3 py-1.5 bg-gray-50 text-gray-800 text-sm font-medium rounded-full border border-gray-200">Entrepreneurs</span>
+                            <span class="px-3 py-1.5 bg-purple-50 text-purple-800 text-sm font-medium rounded-full border border-purple-100">Religious Leaders</span>
+                            <span class="px-3 py-1.5 bg-purple-50 text-purple-800 text-sm font-medium rounded-full border border-purple-100">Community Leaders</span>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4 italic">* Plus anyone aspiring to hold leadership positions across all sectors.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-16 bg-brand-accent relative overflow-hidden">
+        <!-- Abstract shape -->
+        <div class="absolute top-0 right-0 w-64 h-full bg-white opacity-10 transform skew-x-12 translate-x-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="text-brand-900 w-full lg:w-2/3 text-center lg:text-left">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Transform Your Leadership Journey?</h2>
+                <p class="text-lg font-medium opacity-90 mb-0">
+                    Enroll in our upcoming training sessions today. We offer Physical, Corporate, Online, and customized training formats. Limited seats available.
+                </p>
+            </div>
+            <div class="w-full lg:w-1/3 flex justify-center lg:justify-end">
+                <a href="mailto:chagofoundation1@gmail.com" class="bg-brand-900 hover:bg-black text-white font-bold py-4 px-10 rounded-xl shadow-xl transition-all text-lg flex items-center gap-3">
+                    <i class="fa-solid fa-envelope"></i>
+                    Register / Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-gray-300 pt-16 pb-8 border-t border-brand-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand Col -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-brand-900 font-bold text-lg">
+                            C
+                        </div>
+                        <span class="font-bold text-xl tracking-tight text-white block leading-none">CHAGO</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                        Developing Character.<br>
+                        Building Leaders.<br>
+                        Transforming Society.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-accent hover:text-brand-900 transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-accent hover:text-brand-900 transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-800 flex items-center justify-center hover:bg-brand-accent hover:text-brand-900 transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-brand-accent transition-colors">About the Foundation</a></li>
+                        <li><a href="#founder" class="hover:text-brand-accent transition-colors">Meet the Founder</a></li>
+                        <li><a href="#programs" class="hover:text-brand-accent transition-colors">Our Programs</a></li>
+                        <li><a href="#programs" class="hover:text-brand-accent transition-colors">Certification Details</a></li>
+                        <li><a href="#contact" class="hover:text-brand-accent transition-colors">Register for Upcoming Training</a></li>
+                    </ul>
+                </div>
+
+                <!-- Training Formats -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Training Formats</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-building-user text-brand-accent w-4"></i> Corporate Training</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-users-rectangle text-brand-accent w-4"></i> Physical Seminars</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-chalkboard-user text-brand-accent w-4"></i> Workshops</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-microphone-lines text-brand-accent w-4"></i> Conferences</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-laptop text-brand-accent w-4"></i> Online Training</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contact Information</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot text-brand-accent mt-1 text-lg"></i>
+                            <span>
+                                <strong>Training Venue:</strong><br>
+                                87/89 Baale Animashaun Road,<br>
+                                Alakuko, Alagbado,<br>
+                                Lagos, Nigeria
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-accent text-lg"></i>
+                            <a href="tel:+2347025122572" class="hover:text-white">+234 702 512 2572</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-accent text-lg"></i>
+                            <a href="mailto:chagofoundation1@gmail.com" class="hover:text-white break-all">chagofoundation1@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-800 pt-8 mt-8 text-sm text-center flex flex-col md:flex-row justify-between items-center text-gray-500">
+                <p>&copy; 2026 The CHAGO Foundation. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed for Character Reformation & Leadership Development</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if(menu.classList.contains('hidden')){
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                }
+            });
+
+            // Close menu when a link is clicked
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
